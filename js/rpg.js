@@ -6,7 +6,8 @@ rpgApp.controller('AvatarController', function AvatarController($scope) {
 	$scope.avatars = [
 		{
 			src: "../image/drakon.jpg",
-			name: 'Nexus S',
+			name: 'Nexus S', 
+//asdf sadf 
 			desc: 'Fast just got faster with Nexus S.'
 		}, {
 			src: "../image/elf.jpg",
