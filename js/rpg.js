@@ -1,6 +1,6 @@
 var rpgApp = angular.module('rpgApp', []);
 
-// Define the `PhoneListController` controller on the `phonecatApp` module
+// Define the `PhoneListController` controller on the `phonecatApp` module ERROR!!!!
 rpgApp.controller('AvatarController', function AvatarController($scope) {
 	$scope.hi = "hi!";
 	$scope.avatars = [
@@ -23,6 +23,14 @@ rpgApp.controller('AvatarController', function AvatarController($scope) {
 		}
 	];
 });
+
+
+
+
+
+
+
+
 
 	
 	
