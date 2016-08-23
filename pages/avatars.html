@@ -1,0 +1,26 @@
+<html ng-app="rpgApp"><head>
+    <title> RPG </title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"> <!--Для работы class. Эту строчку просто нужно запомнить, не пытаясь вникнуть в значение содержимого-->
+	
+	<script src="../js/angular/angular.min.js"></script>
+	<script src="../js/rpg.js"></script>
+ </head>
+<body ng-controller="AvatarController">
+	<p >{{ava.name}}</p>
+	<div class="total-container">
+
+		<div class="avatars-container left" >
+
+			<div class="avatar left" ng-repeat="avatar in avatars">
+				<img ng-src="{{avatar.src}}">
+			</div>
+		
+		</div>
+		
+		<div class="button right">
+			<a id="nextButton" href="/RPG/details.html">Next</a>
+		</div>
+	
+	</div>
+
+</body></html>
