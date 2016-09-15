@@ -36,10 +36,10 @@
     border: solid #92ff0a; /* Параметры границы */
 }
 
-.sidebar, .content, .name, .properties {
-    padding: 10px; /* Поля */
-    border: solid 1px #000; /* Параметры рамки */
-    background: #e8362e; /* Цвет фона */
+.sidebar, .hero-card, .quest, .properties, .log {
+    padding: 7px; /* Поля */
+    border: 1px green solid; /* Параметры рамки */
+    background: rgba(255, 210, 201, 0.23); /* Цвет фона */
 }
 
 .layout {
@@ -50,12 +50,15 @@
 }
 
 .sidebar { /* Навигация по сайту */
-    width: 200px; /* Ширина меню */
+    width: 350px; /* Ширина меню */
+    min-height: 500px;
     float: right; /* Состыковка с другим слоем по горизонтали */
+    position: fixed;
+    left: calc(100% - 375px);
 }
 
 .content { /* Основное содержание страницы */
-    margin-right: 235px; /* Отступ слева */
+    margin-right: 315px; /* Отступ слева */
 }
 
 .text {
@@ -63,15 +66,15 @@
     margin: 0;
 }
 
-.name {
-    width: 270px;
-    height: 280px;
-    margin: 10px;
+.hero-card {
+    width: 286px;
+    height: 156px;
+    margin: 0 10px 10px;
 }
 
 .leftimg {
     float: left;
-    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+    margin: 0 7px 7px 0; /* Отступы вокруг картинки */
 }
 
 .properties {
@@ -79,9 +82,9 @@
 }
 
 .quest {
-    height: 180px;
-    width: 460px;
-    border: solid 1px #000000;
+    /*height: 280px;*/
+    width: 300px;
+    margin: 0 10px;
 }
 
 .specialMarginForQuests {
@@ -96,11 +99,324 @@
     width: 150px;
     height: 120px;
     border: solid 1px #000030;
-    margin:90px 0;
+    margin: 90px 0;
 }
 
 .log {
     width: 940px;
     height: 350px;
-    border: solid 1px #000030;
+    margin-top: 10px;
+}
+
+/************** Popup ***************/
+
+.popup-background {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: black;
+    opacity: 0.5;
+    position: fixed;
+}
+
+.popup {
+    z-index: 100;
+    padding: 10px;
+}
+
+.popup-position {
+    margin: auto;
+    position: fixed;
+    width: 600px;
+    top: 20%;
+    left: 25%;
+}
+
+.buttons-position {
+    margin: auto;
+    width: 50%;
+    min-width: 100px;
+}
+
+.button-previous-position {
+    width: 31%;
+    padding: 15px;
+}
+
+.button-previous {
+    background-color:#44c767;
+    -moz-border-radius:21px;
+    -webkit-border-radius:21px;
+    border-radius:21px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:24px;
+    font-weight:bold;
+    padding:2px 21px;
+    text-decoration:none;
+    text-shadow:0px 2px 0px #2f6627;
+}
+.button-previous:hover {
+    background-color:#5cbf2a;
+}
+.button-previous:active {
+    position:relative;
+    top:1px;
+}
+
+
+.button-radio-position {
+    width: 23%;
+    text-align: center;
+    padding: 15px;
+}
+
+.button-radio {
+    -moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+    box-shadow:inset 0px 1px 0px 0px #a4e271;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #24e024), color-stop(1, #77a809));
+    background:-moz-linear-gradient(top, #24e024 5%, #77a809 100%);
+    background:-webkit-linear-gradient(top, #24e024 5%, #77a809 100%);
+    background:-o-linear-gradient(top, #24e024 5%, #77a809 100%);
+    background:-ms-linear-gradient(top, #24e024 5%, #77a809 100%);
+    background:linear-gradient(to bottom, #24e024 5%, #77a809 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#24e024', endColorstr='#77a809',GradientType=0);
+    background-color:#24e024;
+    -moz-border-radius:16px;
+    -webkit-border-radius:16px;
+    border-radius:16px;
+    border:1px solid #74b807;
+    display:inline-block;
+    cursor:pointer;
+    color:#41e633;
+    font-family:Arial;
+    font-size:10px;
+    font-weight:bold;
+    padding:7px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528009;
+}
+.button-radio:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #24e024));
+    background:-moz-linear-gradient(top, #77a809 5%, #24e024 100%);
+    background:-webkit-linear-gradient(top, #77a809 5%, #24e024 100%);
+    background:-o-linear-gradient(top, #77a809 5%, #24e024 100%);
+    background:-ms-linear-gradient(top, #77a809 5%, #24e024 100%);
+    background:linear-gradient(to bottom, #77a809 5%, #24e024 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#24e024',GradientType=0);
+    background-color:#77a809;
+}
+.button-radio:active {
+    position:relative;
+    top:1px;
+}
+
+.button-next-position {
+    width: 31%;
+    padding: 15px;
+}
+
+.button-next {
+    background-color:#44c767;
+    -moz-border-radius:21px;
+    -webkit-border-radius:21px;
+    border-radius:21px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:24px;
+    font-weight:bold;
+    padding:2px 21px;
+    text-decoration:none;
+    text-shadow:0px 2px 0px #2f6627;
+}
+.button-next:hover {
+    background-color:#5cbf2a;
+}
+.button-next:active {
+    position:relative;
+    top:1px;
+}
+
+.header {
+    height: 50px;
+    font-size: 50px; /* Размер шрифта в пикселах */
+    color: rgba(0, 0, 106, 0.79); /* Синий цвет текста */
+    padding: 5px;
+}
+
+.body {
+    height: 180px;
+    font-size: 25px; /* Размер шрифта в пикселах */
+    color: #000080; /* Цвет текста */
+    padding: 10px;
+    background: whitesmoke;
+}
+
+.footer {
+    height: 50px;
+}
+
+.myButton {
+    -moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff3700), color-stop(1, #6e3328));
+    background: -moz-linear-gradient(top, #ff3700 5%, #6e3328 100%);
+    background: -webkit-linear-gradient(top, #ff3700 5%, #6e3328 100%);
+    background: -o-linear-gradient(top, #ff3700 5%, #6e3328 100%);
+    background: -ms-linear-gradient(top, #ff3700 5%, #6e3328 100%);
+    background: linear-gradient(to bottom, #ff3700 5%, #6e3328 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3700', endColorstr='#6e3328', GradientType=0);
+    background-color: #ff3700;
+    -moz-border-radius: 19px;
+    -webkit-border-radius: 19px;
+    border-radius: 19px;
+    border: 2px solid #5e1b0d;
+    display: inline-block;
+    cursor: pointer;
+    color: #fffcff;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 11px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+}
+
+.myButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6e3328), color-stop(1, #ff3700));
+    background: -moz-linear-gradient(top, #6e3328 5%, #ff3700 100%);
+    background: -webkit-linear-gradient(top, #6e3328 5%, #ff3700 100%);
+    background: -o-linear-gradient(top, #6e3328 5%, #ff3700 100%);
+    background: -ms-linear-gradient(top, #6e3328 5%, #ff3700 100%);
+    background: linear-gradient(to bottom, #6e3328 5%, #ff3700 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6e3328', endColorstr='#ff3700', GradientType=0);
+    background-color: #6e3328;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.myButtonPosition {
+    position: relative;
+    top: -25px;
+    right: -25px;
+}
+
+/************** THE END ***************/
+
+.displayHide {
+    display: none
+}
+
+#layer1, #layer2 {
+    position: fixed; /* Относительное позиционирование */
+}
+
+#layer1 {
+    font-size: 500px; /* Размер шрифта в пикселах */
+    color: #000080; /* Синий цвет текста */
+    background: black;
+    opacity: 0.5;
+}
+
+#layer2 {
+    /*top: 50px; /* Сдвигаем текст вверх */
+    /*left: 5px; /* Сдвигаем текст вправо */
+    color: #ffa500; /* Оранжевый цвет текста */
+    font-size: 500px; /* Размер шрифта в пикселах */
+    margin: auto;
+}
+
+#layer1 {
+    z-index: 1;
+}
+
+#layer2 {
+    z-index: 100;
+}
+
+/***** Styles for Test ******/
+
+.border-container {
+    margin: 10px;
+    padding: 10px; /* Поля */
+    border: solid 1px #000; /* Параметры рамки */
+}
+
+.border-div {
+    margin: 2px;
+    padding: 5px;
+    border:solid 1px #0003AA;
+    height: 5%;
+    width: 95%;
+}
+
+.block300 {
+    width: 300px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.guild-card {
+    width: 300px;
+    border: 1px #0003aa solid;
+}
+
+.without-indents {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.ng-binding {
+    margin: 16px 0 16px 0;
+}
+
+.guild-skill {
+    width: 300px;
+    border: 1px rgba(217, 45, 6, 0.87) solid;
+}
+
+.ng-binding-center {
+    margin: 16px 0 16px 0;
+    text-align: center;
+}
+
+.hero-room {
+    width: 400px;
+    border: 1px rgb(5, 0, 3) solid;
+    margin: 0 0 0 10px;
+}
+
+.bed {
+    width: 301px;
+    height: 171px;
+    border: 1px rgba(0, 0, 0, 0.66) solid;
+    margin: 10px;
+}
+
+.indent15 {
+    margin-left: 15px;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.test {
+    border: 1px rgba(0, 0, 0, 0.66) solid;
+    background: red;
+    width: 200px;
+    height: 100px;
 }

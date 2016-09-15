@@ -4,50 +4,65 @@
     <title> RPG - Perfomance </title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <!--Для работы class. Эту строчку просто нужно запомнить, не пытаясь вникнуть в значение содержимого-->
-
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="../js/sidebar.js"></script>
 </head>
 <body>
 
 <div class="layout">
-    <div class="sidebar">
+    <div id="sidebarDiv" class="sidebar">
+        <form class="leftimg">
+            <p><input id="sidebarHideButton" type="button" value="&#10097;"></p>
+        </form>
         <p align="center"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod
-            tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis nostrud exerci
-            tution ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi. Duis
+            tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis nostrud
+            exerci
+            tution ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
+            Duis
             autem dolor minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis. </p>
         <p align="center"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod
-            tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis nostrud exerci
-            tution ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi. Duis
+            tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim ad minim veniam, quis nostrud
+            exerci
+            tution ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
+            Duis
             autem dolor minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis. </p>
     </div>
+    <div id="sidebarAppearButtonDiv" class="right displayHide">
+        <form class="button right">
+            <p><input type="button" value="&#10096;"></p>
+        </form>
+    </div>
     <div class="content">
-        <div class="name left">
-            <p class="text"><b>Name</b></p>
-            <p><img src="../image/drakon.jpg" width="75" height="120" class="leftimg">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy
-                nibh euismod tinciam, quis nostrud exerci tution ullamcorper
-                suscipit lobortisit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
-                Duis autem d.</p>
-            <div class="properties left">
-                Lorem
+        <div class="left">
+            <div class="hero-card left">
+                <p class="text"><b>Name</b></p>
+                <p><img src="../image/drakon.jpg" width="75" height="120" class="leftimg">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy
+                    nibh euismod tinciam, quis nostrud exerci tution ullamcorper
+                    suscipit lobortisit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
+                    Duis autem d.</p>
+                <div class="properties left">
+                    Lorem
+                </div>
+                <div class="properties left">
+                    Lorem
+                </div>
+                <div class="properties left">
+                    Lorem
+                </div>
             </div>
-            <div class="properties left">
-                Lorem
+            <div class="arrow left">
+                <img src="../image/arrow.jpg" width="150" height="120">
             </div>
-            <div class="properties left">
-                Lorem
+            <div class="quest left">
+                <p class="text"><b>Name</b></p>
+                <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy
+                    nibh. Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper
+                    suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
+                    Duis autem dolor minim veniam, quis nostrud exerci tution ullamcorper
+                    suscipit lobortisit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
+                    Duis autem d.</p>
             </div>
-        </div>
-        <div class="arrow left">
-            <img src="../image/arrow.jpg" width="150" height="120">
-        </div>
-        <div class="quest left specialMarginForPerfomance">
-            <p class="text"><b>Name</b></p>
-            <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy
-                nibh. Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper
-                suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
-                Duis autem dolor minim veniam, quis nostrud exerci tution ullamcorper
-                suscipit lobortisit lobortis nisl ut aliquip ex ea commodo consequat. Duis te feugifacilisi.
-                Duis autem d.</p>
         </div>
         <div class="log left">
 
